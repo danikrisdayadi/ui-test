@@ -1,7 +1,6 @@
 <suite name="Basic Test Suite">
 	<test name="Basic Login and Register Page Testing">
 		<classes>
-			<class name="package co.interseed.qa.ui_test.LoginPageTest" />
 			<class name="package co.interseed.qa.ui_test.RegisterPageTest" />
 		</classes>
 	</test>
