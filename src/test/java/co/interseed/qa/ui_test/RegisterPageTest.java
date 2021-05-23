@@ -76,6 +76,9 @@ public class RegisterPageTest {
 		expectedUrl = "https://app.interseed.co/login";
 		url = driver.getCurrentUrl();
 		Assert.assertEquals(url, expectedUrl);
+
+		driver.findElement(By.linkText("Register")).click();
+		driver.findElement(By.xpath("//button[text() = 'Login']")).click();
 	}
 
 	@Test
