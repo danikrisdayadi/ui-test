@@ -22,6 +22,10 @@ public class LoginPageTest {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 	    options.addArguments("--start-fullscreen");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--headless");
+
 		this.driver = new ChromeDriver(options);
 		driver.get("https://app.interseed.co");
 		this.wait = new WebDriverWait(driver, 5);
