@@ -10,6 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class LoginPageTest {
@@ -18,8 +19,7 @@ public class LoginPageTest {
 	
 	@BeforeMethod
 	public void SetUpEnvironment() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\kanis\\Documents\\Legit Stuff\\NUS\\YSI SEA\\Java Extras\\chromedriver\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 	    options.addArguments("--start-fullscreen");
 		this.driver = new ChromeDriver(options);
