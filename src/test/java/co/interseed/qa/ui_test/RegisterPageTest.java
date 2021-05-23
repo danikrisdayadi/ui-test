@@ -63,47 +63,47 @@ public class RegisterPageTest {
 		Assert.assertEquals(hasAccountExisted, expectedHasAccountExisted);
 	}
 	
-	@Test
-	public void RegisterButtonsTest() throws InterruptedException {
-		driver.findElement(By.linkText("Register")).click();
-		String expectedUrl = "https://app.interseed.co/register";
-		String url = driver.getCurrentUrl();
-		Assert.assertEquals(url, expectedUrl);
+	// @Test
+	// public void RegisterButtonsTest() throws InterruptedException {
+	// 	driver.findElement(By.linkText("Register")).click();
+	// 	String expectedUrl = "https://app.interseed.co/register";
+	// 	String url = driver.getCurrentUrl();
+	// 	Assert.assertEquals(url, expectedUrl);
 		
-		driver.findElement(By.linkText("Log in")).click();
+	// 	driver.findElement(By.linkText("Log in")).click();
 		
-		expectedUrl = "https://app.interseed.co/login";
-		url = driver.getCurrentUrl();
-		Assert.assertEquals(url, expectedUrl);
+	// 	expectedUrl = "https://app.interseed.co/login";
+	// 	url = driver.getCurrentUrl();
+	// 	Assert.assertEquals(url, expectedUrl);
 		
-		driver.findElement(By.linkText("Register")).click();
-		driver.findElement(By.xpath("//button[text() = 'Login']")).click();
-		url = driver.getCurrentUrl();
-		Assert.assertEquals(url, expectedUrl);
+	// 	driver.findElement(By.linkText("Register")).click();
+	// 	driver.findElement(By.xpath("//button[text() = 'Login']")).click();
+	// 	url = driver.getCurrentUrl();
+	// 	Assert.assertEquals(url, expectedUrl);
 		
-		driver.findElement(By.linkText("About")).click();
-		expectedUrl = "https://app.interseed.co/about";
-		url = driver.getCurrentUrl();
-		Assert.assertEquals(url, expectedUrl);
+	// 	driver.findElement(By.linkText("About")).click();
+	// 	expectedUrl = "https://app.interseed.co/about";
+	// 	url = driver.getCurrentUrl();
+	// 	Assert.assertEquals(url, expectedUrl);
 		
-		driver.findElement(By.linkText("Resources")).click();
-		expectedUrl = "https://app.interseed.co/resources";
-		url = driver.getCurrentUrl();
-		Assert.assertEquals(url, expectedUrl);
+	// 	driver.findElement(By.linkText("Resources")).click();
+	// 	expectedUrl = "https://app.interseed.co/resources";
+	// 	url = driver.getCurrentUrl();
+	// 	Assert.assertEquals(url, expectedUrl);
 		
-		driver.findElement(By.linkText("Community")).click();
-		expectedUrl = "https://app.interseed.co/community";
-		url = driver.getCurrentUrl();
-		Assert.assertEquals(url, expectedUrl);
+	// 	driver.findElement(By.linkText("Community")).click();
+	// 	expectedUrl = "https://app.interseed.co/community";
+	// 	url = driver.getCurrentUrl();
+	// 	Assert.assertEquals(url, expectedUrl);
 		
-		driver.findElement(By.linkText("Landscapes")).click();
-		expectedUrl = "https://app.interseed.co/landscapes";
-		url = driver.getCurrentUrl();
-		Assert.assertEquals(url, expectedUrl);
+	// 	driver.findElement(By.linkText("Landscapes")).click();
+	// 	expectedUrl = "https://app.interseed.co/landscapes";
+	// 	url = driver.getCurrentUrl();
+	// 	Assert.assertEquals(url, expectedUrl);
 		
-		driver.findElement(By.linkText("Dashboard")).click();
-		expectedUrl = "https://app.interseed.co/dashboard";
-		url = driver.getCurrentUrl();
-		Assert.assertEquals(url, expectedUrl);
-	}
+	// 	driver.findElement(By.linkText("Dashboard")).click();
+	// 	expectedUrl = "https://app.interseed.co/dashboard";
+	// 	url = driver.getCurrentUrl();
+	// 	Assert.assertEquals(url, expectedUrl);
+	// }
 }
