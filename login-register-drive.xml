@@ -3,6 +3,7 @@
 	<test name="Basic Login and Register Page Testing">
 		<classes>
 			<class name="co.interseed.qa.ui_test.RegisterPageTest" />
+			<class name="co.interseed.qa.ui_test.LoginPageTest" />
 		</classes>
 	</test>
 </suite>

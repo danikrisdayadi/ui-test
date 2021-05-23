@@ -37,7 +37,6 @@ public class LoginPageTest {
 	
 	@Test
 	public void LoginTest() throws InterruptedException {
-		System.out.println("LOGIN TEST IS CALLED!!");
 		driver.findElement(By.id("email")).sendKeys("asdasd@gmail.com");
 		driver.findElement(By.id("password")).sendKeys("asdasdasd");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();

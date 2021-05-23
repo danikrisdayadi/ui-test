@@ -21,9 +21,9 @@ public class RegisterPageTest {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--no-sandbox");
-		options.addArguments("--window-size=1920,1080");
+		options.addArguments("--window-size=1920,1080"); // Define width and height to ensure web is fully maximised, default is 800x600
 		options.addArguments("--disable-dev-shm-usage");
-		options.addArguments("--headless");
+		options.addArguments("--headless"); // Run headless to reduce memory usage
 		this.driver = new ChromeDriver(options);
 		driver.get("https://app.interseed.co");
 		this.wait = new WebDriverWait(driver, 5);
@@ -36,7 +36,6 @@ public class RegisterPageTest {
 
 	@Test
 	public void RegisterSanityTest() throws InterruptedException {
-		System.out.println("REGISTER PAGE!!");
 		driver.findElement(By.linkText("Register")).click();
 
 		String expectedLoginUrl = "https://app.interseed.co/register";
@@ -66,7 +65,6 @@ public class RegisterPageTest {
 	
 	@Test
 	public void TestButton() throws InterruptedException {
-		System.out.println("TEST BUTTON TEST");
 		driver.findElement(By.linkText("Register")).click();
 		String expectedUrl = "https://app.interseed.co/register";
 		String url = driver.getCurrentUrl();
@@ -90,9 +88,6 @@ public class RegisterPageTest {
 		Assert.assertEquals(url, expectedUrl);
 		
 		driver.findElement(By.linkText("Log in")).click();
-		
-		System.out.println("REGISTER BUTTON LOGIN");
-
 		expectedUrl = "https://app.interseed.co/login";
 		url = driver.getCurrentUrl();
 		Assert.assertEquals(url, expectedUrl);
@@ -101,8 +96,6 @@ public class RegisterPageTest {
 		driver.findElement(By.xpath("//button[text() = 'Login']")).click();
 		url = driver.getCurrentUrl();
 		Assert.assertEquals(url, expectedUrl);
-		
-		System.out.println("BACK TO LOGIN");
 
 		driver.findElement(By.linkText("About")).click();
 		expectedUrl = "https://app.interseed.co/about";
