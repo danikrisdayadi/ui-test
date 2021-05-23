@@ -21,11 +21,11 @@ public class RegisterPageTest {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--no-sandbox");
+		options.addArguments("--window-size=1920,1080");
 		options.addArguments("--disable-dev-shm-usage");
 		options.addArguments("--headless");
 		this.driver = new ChromeDriver(options);
 		driver.get("https://app.interseed.co");
-		driver.manage().window().setSize(new Dimension(1920,1080));
 		this.wait = new WebDriverWait(driver, 5);
 	}
 
