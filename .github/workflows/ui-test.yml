@@ -20,4 +20,4 @@ jobs:
             ./scripts/InstallChrome.sh 
       - name: Run Tests with Maven
         run: |
-          mvn -q test
+          mvn -B test
