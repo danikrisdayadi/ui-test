@@ -41,7 +41,7 @@ public class LoginPageTest {
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
 		wait.until(ExpectedConditions.urlToBe("https://app.interseed.co/landscapes"));
-		String expectedLoginUrl = "https://app.interseed.co/landscapes";
+		String expectedLoginUrl = "https://app.interseed.co/landscape";
 		String loginUrl = driver.getCurrentUrl();
 		Assert.assertEquals(loginUrl, expectedLoginUrl);		
 	}
