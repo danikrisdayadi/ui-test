@@ -18,9 +18,7 @@ jobs:
         run: |
             chmod +x ./scripts/InstallChrome.sh
             ./scripts/InstallChrome.sh 
-      # - name: Build with Maven
-      #   run: mvn -B package --file pom.xml
-      - name: Test with Maven
+      - name: Run Tests with Maven
         run: |
           mvn -q install
           mvn clean
