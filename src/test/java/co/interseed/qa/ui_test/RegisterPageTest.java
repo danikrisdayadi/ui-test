@@ -36,6 +36,7 @@ public class RegisterPageTest {
 
 	@Test
 	public void RegisterSanityTest() throws InterruptedException {
+		System.out.println("REGISTER PAGE!!");
 		driver.findElement(By.linkText("Register")).click();
 
 		String expectedLoginUrl = "https://app.interseed.co/register";
