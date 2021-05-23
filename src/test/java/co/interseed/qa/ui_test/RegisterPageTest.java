@@ -71,6 +71,11 @@ public class RegisterPageTest {
 		String expectedUrl = "https://app.interseed.co/register";
 		String url = driver.getCurrentUrl();
 		Assert.assertEquals(url, expectedUrl);
+
+		driver.findElement(By.linkText("Log in")).click();
+		expectedUrl = "https://app.interseed.co/login";
+		url = driver.getCurrentUrl();
+		Assert.assertEquals(url, expectedUrl);
 	}
 
 	@Test
