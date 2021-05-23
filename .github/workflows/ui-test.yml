@@ -22,6 +22,6 @@ jobs:
       #   run: mvn -B package --file pom.xml
       - name: Test with Maven
         run: |
-          mvn -B install
+          mvn -q install
           mvn clean
           mvn test
