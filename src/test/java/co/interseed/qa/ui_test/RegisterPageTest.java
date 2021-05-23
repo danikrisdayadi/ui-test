@@ -65,7 +65,17 @@ public class RegisterPageTest {
 	}
 	
 	@Test
+	public void TestButton() throws InterruptedException {
+		System.out.println("TEST BUTTON TEST");
+		driver.findElement(By.linkText("Register")).click();
+		String expectedUrl = "https://app.interseed.co/register";
+		String url = driver.getCurrentUrl();
+		Assert.assertEquals(url, expectedUrl);
+	}
+
+	@Test
 	public void RegisterButtonsTest() throws InterruptedException {
+		System.out.println("REGISTER BUTTON START");
 		driver.findElement(By.linkText("Register")).click();
 		String expectedUrl = "https://app.interseed.co/register";
 		String url = driver.getCurrentUrl();
@@ -73,6 +83,8 @@ public class RegisterPageTest {
 		
 		driver.findElement(By.linkText("Log in")).click();
 		
+		System.out.println("REGISTER BUTTON LOGIN");
+
 		expectedUrl = "https://app.interseed.co/login";
 		url = driver.getCurrentUrl();
 		Assert.assertEquals(url, expectedUrl);
@@ -82,6 +94,8 @@ public class RegisterPageTest {
 		url = driver.getCurrentUrl();
 		Assert.assertEquals(url, expectedUrl);
 		
+		System.out.println("BACK TO LOGIN");
+
 		driver.findElement(By.linkText("About")).click();
 		expectedUrl = "https://app.interseed.co/about";
 		url = driver.getCurrentUrl();
