@@ -1,4 +1,4 @@
-package co.interseed.qa.ui_test;
+package co.interseed;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

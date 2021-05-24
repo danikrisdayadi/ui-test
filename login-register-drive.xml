@@ -2,8 +2,8 @@
 <suite name="Basic Test Suite">
 	<test name="Basic Login and Register Page Testing">
 		<classes>
-			<class name="co.interseed.qa.ui_test.RegisterPageTest" />
-			<class name="co.interseed.qa.ui_test.LoginPageTest" />
+			<class name="co.interseed.RegisterPageTest" />
+			<class name="co.interseed.LoginPageTest" />
 		</classes>
 	</test>
 </suite>
